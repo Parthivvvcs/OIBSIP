@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+
+    <title>Temperature converter</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h1>Temperature Converter</h1>
+            <div class="box">
+                <div class="input">
+                    <div class="degree">
+                        <span>Degree</span>
+                        <input type="number" id="number">
+                    </div>
+        
+                    <div class="unit">
+                        <span>Type</span>
+                        <select name="Type" id="unitFrom">
+                            <option value="Choose the Unit Type">Choose the Unit Type</option>
+                            <option value="Celsius">Celsius</option>
+                            <option value="Fahrenheit">Fahrenheit</option>
+                            <option value="Kelvin">Kelvin</option>
+        
+                        </select>
+        
+                    </div>
+                </div>
+
+                
+                    <div class="convert-into">
+                        <span>Convert Into</span>
+                        <select name="Type" id="unitTo">
+                            <option value="Choose the Unit Type">Choose the Unit Type</option>
+                            <option value="Celsius">Celsius</option>
+                            <option value="Fahrenheit">Fahrenheit</option>
+                            <option value="Kelvin">Kelvin</option>
+        
+                        </select>
+        
+                    </div>
+                
+                <button class="btn" >Convert</button>
+
+                <div class="result">
+                  <span>Result</span>
+                  <p id="answer">_</p>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</body>
+
+<script>
+    function calculate() {
+        const input = parseFloat(document.getElementById('number').value);
+        const unitFrom = document.getElementById('unitFrom').value;
+        const unitTo = document.getElementById('unitTo').value;
+        let result;
+
+        if (unitFrom === "Celsius") {
+            if (unitTo === "Fahrenheit") {
+                result = (input * 9/5) + 32;
+            } else if (unitTo === "Kelvin") {
+                result = input + 273.15;
+            } else {
+                result = input; // No conversion needed if same unit
+            }
+        } else if (unitFrom === "Fahrenheit") {
+            if (unitTo === "Celsius") {
+                result = (input - 32) * 5/9;
+            } else if (unitTo === "Kelvin") {
+                result = (input - 32) * 5/9 + 273.15;
+            } else {
+                result = input; // No conversion needed if same unit
+            }
+        } else if (unitFrom === "Kelvin") {
+            if (unitTo === "Celsius") {
+                result = input - 273.15;
+            } else if (unitTo === "Fahrenheit") {
+                result = (input - 273.15) * 9/5 + 32;
+            } else {
+                result = input; // No conversion needed if same unit
+            }
+        } else {
+            // Handle invalid unit selection
+            result = "Invalid unit";
+        }
+
+        document.getElementById('answer').innerHTML = result;
+    }
+
+    const convertButton = document.querySelector('.btn');
+    convertButton.addEventListener('click', calculate);
+</script>
+
+   
+
+
+</html>

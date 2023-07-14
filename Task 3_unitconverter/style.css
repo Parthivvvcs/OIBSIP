@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body,html{
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 20px 120px 20px 120px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+.main h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.input .degree {
+    
+    margin-right: 30px;
+}
+
+.input .degree span {
+    font-size: 3rem;
+    margin: 5px;
+}
+
+.input .degree input {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.convert-into{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.convert-into span{
+    font-size: 3rem;
+    margin: 5px;
+    margin-right: 10px;
+}
+
+.convert-into select{
+padding: 10px;
+border-radius: 10px;
+}
+
+.box {
+    text-align: center;
+    padding: 100px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.unit span{
+    font-size: 3rem;
+    margin: 5px;
+    margin-right: 10px;
+}
+
+.unit select{
+padding: 10px;
+border-radius: 10px;
+}
+
+.result{
+    margin: 40px;
+}
+.result span{
+    font-size: 3rem;
+}
+
+.btn{
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: rgb(55, 12, 245);
+}
+.btn:hover{
+cursor: pointer;
+background-color: aquamarine;
+color: rgb(38, 61, 61);
+}
+
+
+    
+@media (max-width:799px)
+{
+    .main{
+        box-shadow: none;
+    }
+    .input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .input .degree {
+         margin-right: 0px; 
+    }
+    .box {
+        text-align: center;
+        padding: 55px;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .main {
+        
+        padding: 40px;
+       
+    }
+}

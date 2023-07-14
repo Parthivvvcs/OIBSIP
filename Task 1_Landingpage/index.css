@@ -1,0 +1,1400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* header */
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-color: rgb(219, 222, 222);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Caveat', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    color: rgb(100, 100, 225);
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    width: 100px;
+}
+
+.iconcart {
+    height: 30px;
+    width: 30px;
+}
+
+.navbar li a.iconcart:hover::after {
+    color: aquamarine;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    background: -webkit-linear-gradient(#e40909, #200def);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3sec ease;
+    transition: all 0.3s ease;
+}
+
+.navbar li a.active::after,
+.navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: rgb(19, 19, 19);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+    transition: all 0.3s ease;
+
+}
+
+#header #mobile img {
+    height: 30px;
+}
+
+#mobile {
+
+    position: fixed;
+    right: 10px;
+}
+
+/* hero */
+
+#hero {
+
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url(images/bcg/girl-g9ae377888_1920.jpg);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#hero h2 {
+    padding-bottom: 15px;
+    font-size: 3.2rem;
+
+}
+
+#hero h1 {
+    font-size: 4rem;
+    color: rgb(247, 247, 247);
+}
+
+#hero p {
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+#hero button {
+    background-image: url(images/bcg/button\ \(1\).png);
+    background-color: transparent;
+    color: rgb(11, 81, 57);
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#feature {
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+#feature .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    border: 1px solid #cce7d0;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    margin: 15px 0px;
+
+}
+
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.03);
+}
+
+#feature .fe-box h6 {
+    padding: 9px 8px 6px 8px;
+    font-size: 1rem;
+    border-radius: 4px;
+    color: rgb(22, 124, 90);
+    background-color: rgb(240, 198, 198);
+}
+
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#product1 {
+    padding: 20px 40px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid snow;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    border-radius: 25px;
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product1 .pro .prod {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 h2 {
+    font-size: 3.5rem;
+}
+
+#product1 p {
+    font-size: 2rem;
+}
+
+.pbasix {
+    color: blue;
+}
+
+.star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.star img {
+    height: 50px;
+    width: 50px;
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08);
+}
+
+#product1 .pro .descreption {
+    text-align: start;
+}
+
+#product1 .pro .cart {
+    width: 30px;
+    height: 30px;
+    line-height: 40px;
+    border-radius: 40px;
+    font-weight: 500;
+    background-color: rgb(241, 230, 230);
+    position: absolute;
+    bottom: 70px;
+    right: 20px;
+}
+
+#banner {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url(images/bcg/fashion-banner-1440x480.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h2 {
+    font-family: 'Nunito', sans-serif;
+    color: whitesmoke;
+    font-size: 3rem;
+}
+
+#banner button {
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin: 10px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+#banner span {
+    color: red;
+}
+
+#banner button:hover {
+    background-color: rgb(54, 4, 193);
+    color: rgb(253, 253, 255);
+}
+
+
+#sm-banner {
+    margin: 30px 130px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .bannerbox {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: url(images/bcg/Easy-Outfit-Ideas.webp);
+    min-width: 610px;
+    height: 50vh;
+    background-size: cover;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#sm-banner h4 {
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
+#sm-banner h2 {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500px;
+}
+
+#sm-banner span {
+    font-size: 1.3rem;
+    color: rgb(245, 245, 245);
+    font-weight: 300px;
+    padding: 15x;
+}
+
+#sm-banner .spanblue {
+    color: blue;
+    font-size: 2rem
+}
+
+#sm-banner button {
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin: 10px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+#sm-banner button:hover {
+    background-color: rgb(54, 4, 193);
+    color: rgb(253, 253, 255);
+}
+
+#sm-banner .bannerbox-banner2 {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 10px;
+    background-image: url(images/bcg/Khaki_and_pink_3_2048x2048.webp);
+    min-width: 610px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+#newsletter {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    font-family: 'Nunito', sans-serif;
+    background-image: url(images/bcg/pexels-photo-1666067.jpeg);
+    height: 35vh;
+
+}
+
+#newsletter .text {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#newsletter h2 {
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+#newsletter span {
+    color: rgb(245, 237, 237);
+    font-size: 1.5rem;
+}
+
+#newsletter span .special {
+    color: yellow;
+}
+
+#newsletter .email {
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+#newsletter input {
+    height: 3.2rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button {
+    height: 3.2rem;
+    width: 120px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: rgb(193, 62, 14);
+    white-space: nowrap;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    cursor: pointer;
+}
+
+#newsletter button:hover {
+    background-color: rgb(54, 4, 193);
+    color: rgb(253, 253, 255);
+}
+
+.icons img {
+    height: 20px;
+    width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+#footer {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    justify-content: space-between;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+#footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.copyright {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 5px;
+}
+
+#footer h4 {
+    margin-bottom: 5px;
+}
+
+.logofooter {
+    height: 60px;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+#footer p {
+    margin-bottom: 5px;
+}
+
+#footer .follow {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer .follow img {
+    margin-top: 35px;
+    height: 40px;
+    width: 40px;
+    margin-right: 30px;
+}
+
+/* shop page */
+
+#page-header {
+    background-image: url(images/bcg/Main_store_banner_bottom.jpg);
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-position: 30% 40%;
+}
+
+#page-header .ph {
+    color: rgb(236, 232, 5);
+    font-size: 3rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pagination img {
+    height: 18px;
+    width: 25px;
+
+}
+
+#pagination a {
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin: 5px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    color: whitesmoke;
+    background-color: rgb(80, 80, 203);
+}
+
+#pagination a:hover {
+    color: rgb(35, 169, 176);
+    background-color: rgb(224, 231, 15);
+}
+
+/* single product */
+
+
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+    padding: 0 60px;
+    margin-bottom: 30px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#prodetails .singlepro {
+    width: 40%;
+    margin-right: 50px;
+}
+
+.smallimagegroup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.smallimagecol {
+    flex-basis: 24%;
+    cursor: pointer;
+
+}
+
+#prodetails .singleprodetails {
+    width: 50%;
+    padding-top: 30px;
+}
+
+#prodetails .singleprodetails h4 {
+    padding: 40px 0 20px 0;
+
+}
+
+#prodetails .singleprodetails h2 {
+
+    font-size: 1.5rem;
+}
+
+#prodetails .singleprodetails select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#prodetails .singleprodetails input {
+    width: 50px;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 1rem;
+    text-align: center;
+    margin-right: 10px;
+}
+
+#prodetails .singleprodetails button {
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: rgb(44, 130, 98);
+    color: aliceblue;
+    margin: 10px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+#prodetails .singleprodetails button:hover {
+    background-color: rgb(54, 4, 193);
+    color: rgb(253, 253, 255);
+}
+
+#prodetails .singleprodetails h4 {
+    font-size: 1.5rem;
+}
+
+#prodetails .singleprodetails span {
+    font-size: 1.2rem;
+}
+
+/* blog */
+#page-header.blogheader {
+    background-image: url(images/bcg/colours-fashion-banner-feb15.jpg);
+    font-family: 'Nunito', sans-serif;
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-position: 30% 40%;
+}
+
+#page-header .ph {
+    color: red;
+}
+
+#blog {
+    font-family: 'Nunito', sans-serif;
+    padding: 150px 150px 0 150px;
+
+}
+
+#blog .blogbox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+#blog .blogimg {
+    width: 50%;
+    margin-right: 40px;
+}
+
+#blog img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+}
+
+#blog img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#blog .blogdetails {
+    width: 100%;
+}
+
+#blog,
+h4,
+h2,
+p {
+    font-size: 1.2rem;
+}
+
+#blog .blogdetails a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+#blog .blogdetails a::after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 15px;
+    right: -60px;
+    transition: 0.3s;
+}
+
+#blog .blogdetails a:hover {
+    color: #e40909;
+}
+
+#blog .blogdetails a:hover::after {
+    background-color: #e40909;
+}
+
+.blogbox h1 {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    color: #8a8d8b;
+    z-index: -9;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 5rem;
+}
+
+/* about */
+
+#page-header.aboutheader {
+    background-image: url(images/bcg/clothes.jpg);
+
+}
+
+#about-head {
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#about-head div {
+    padding-left: 40px;
+}
+
+#about-head img {
+    width: 50%;
+    height: auto;
+}
+
+#about-head h2 {
+    font-size: 3rem;
+}
+
+#about-app {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    padding: 0px 50px;
+    margin-bottom: 50px;
+}
+
+#about-app .video {
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+
+#about-app .video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+#about-app h1 {
+    font-size: 3.5rem;
+}
+
+/* contact */
+
+#page-header.contactheader {
+    background-image: url(images/bcg/contact_us_banner-1.png);
+}
+
+#contact-details {
+    padding: 20px 60px;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+
+}
+
+#contact-details .details {
+    width: 40%;
+}
+
+#contact-details h2 {
+    font-size: 2.2rem;
+}
+
+#contact-details h3 {
+    margin-top: 20px;
+    font-size: 1.7rem;
+}
+
+#contact-details span {
+    font-size: 1.2rem;
+}
+
+#contact-details .details {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-details li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#contact-details .map {
+    width: 55%;
+}
+
+#contact-details .map iframe {
+    width: 100%;
+}
+
+#formpage {
+    padding: 40px;
+}
+
+#formpage h3,
+h1 {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.forms {
+
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.forms h2 {
+    text-align: center;
+}
+
+.forms h1 {
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+.form-group button {
+    background-color: #2707dd;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* cart */
+
+#page-header.cartheader {
+    background-image: url(images/bcg/cartbanner2_02.png);
+}
+
+#cart {
+    padding: 50px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#cart table {
+    margin: auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart img {
+    width: 100px;
+}
+
+#cart table #close img {
+    width: 30px;
+}
+
+#cart table.closeicon img {
+    width: 10px;
+}
+
+#cart table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+
+#cart table td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3) {
+    width: 250px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(5) input {
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+#cart table thead {
+    border: 1px solid rgb(140, 132, 132);
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead td {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 18px 0;
+}
+
+#cart table tbody tr td {
+    padding-top: 15px;
+}
+
+#cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#coupon {
+    width: 50%;
+    margin-bottom: 30px;
+}
+#coupon h3{
+    padding-bottom: 10px;
+}
+
+#coupon  input{
+    padding: 10px 20px;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid rgb(48, 46, 44);
+    outline: none;
+    margin-bottom: 10px;
+}
+
+#coupon button{
+    padding: 10px;  
+    border-radius: 10px; 
+    border: none;
+    background-color: #18a948;
+    color: whitesmoke;
+    cursor: pointer;
+    width: 100px;
+
+}
+#coupon button:hover{
+    background-color: rgb(70, 12, 243);
+}
+
+#subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid rgb(184, 182, 181);
+    padding: 30px;
+}
+
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 20px 10px 0;
+}
+
+#subtotal table td{
+    width: 50%;
+    border: 1px solid rgb(183, 182, 179);
+    padding: 10px;
+    font-size: 1rem;
+}
+#subtotal h3{
+    font-size: 2rem;
+}
+
+#subtotal button{
+    padding: 10px;  
+    border-radius: 10px; 
+    border: none;
+    background-color: #18a948;
+    color: whitesmoke;
+    cursor: pointer;
+
+}
+#subtotal button:hover{
+    background-color: rgb(70, 12, 243);
+}
+
+
+
+@media (max-width:799px) {
+
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100%;
+        width: 300px;
+        background-color: aliceblue;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.7s ease;
+
+    }
+
+    .active {
+        right: 0;
+    }
+
+    .navbar li {
+        margin-bottom: 20px;
+    }
+
+
+    #mobile {
+        display: flex;
+        align-items: center;
+        z-index: 999;
+    }
+
+    #mobile img {
+        margin-right: 15px;
+    }
+
+    .navbar .iconcart {
+        display: none;
+    }
+
+    #hero {
+        background-image: url(images/bcg/girl-g9ae377888_1920.jpg);
+        height: 70vh;
+        background-position: top 30% right 30%;
+        padding: 0 80px;
+
+    }
+
+    #product1 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro {
+        margin: 35px;
+    }
+
+    #banner {
+
+        height: 20vh;
+    }
+
+    #sm-banner .bannerbox {
+        width: 100%;
+        height: 30vh;
+    }
+
+    #sm-banner .bannerbox-banner2 {
+        width: 100%;
+        height: 30vh;
+    }
+
+    #sm-banner {
+        margin: 30px 130px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    #newsletter .email {
+        width: 70%;
+    }
+
+    #newsletter {
+        height: 25vh;
+    }
+
+    #footer {
+
+        justify-content: space-around;
+
+    }
+
+    #prodetails .singleprodetails span {
+        font-size: 0.7rem;
+
+    }
+
+    #page-header.blogheader {
+        background-image: url(images/bcg/colours-fashion-banner-feb15.jpg);
+        background-position: 90% 10%;
+    }
+
+    #blog .blogimg {
+        width: 100%;
+        margin-right: 40px;
+    }
+
+    #about-head p {
+        font-size: 1rem;
+    }
+
+
+    /* cart */
+
+    #cart{
+        overflow-x:scroll;
+    }
+}
+
+
+@media (max-width:620px) {
+
+    body,
+    html {
+        overflow-x: hidden;
+    }
+
+    #header {
+
+        padding: 10px 30px;
+
+    }
+
+    #hero {
+        padding: 5px;
+    }
+
+    #feature {
+        padding: 5px 5px;
+
+    }
+
+    #product1 .pro {
+        min-width: 100%;
+    }
+
+    #banner {
+        height: 40vh;
+    }
+
+    #sm-banner .bannerbox {
+
+        min-width: 365px;
+
+    }
+
+    #sm-banner .bannerbox-banner2 {
+
+        min-width: 366px;
+        margin-top: 10px;
+    }
+
+    #newsletter {
+        flex-direction: column;
+        height: 45vh;
+    }
+
+    #footer .col {
+
+        align-items: center;
+
+    }
+
+    #footer .follow img {
+        margin-top: 12px;
+        margin-bottom: 20px;
+    }
+
+    #newsletter .email {
+        margin-bottom: 80px;
+    }
+
+    #sm-banner {
+        margin-top: -45px;
+    }
+
+    #feature .fe-box {
+        width: 165px;
+    }
+
+    /* shop */
+    #page-header {
+
+        height: 55vh;
+    }
+
+    /* singleproduct */
+
+    #prodetails {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #prodetails .singlepro {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    #prodetails .singleprodetails {
+        width: 100%;
+
+    }
+
+
+    /* blogpage */
+    #blog .blogbox {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #blog {
+        padding: 100px 20px 0 20px;
+    }
+
+    #blog .blogimg {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+    #page-header.blogheader {
+        background-image: url(images/bcg/colours-fashion-banner-feb15.jpg);
+
+        background-position: 90% 40%;
+    }
+
+    /* about */
+    #about-head {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px 50px;
+        font-family: 'Nunito', sans-serif;
+        padding: 0px;
+    }
+
+    #about-head div {
+        padding-left: 15px;
+    }
+
+    #about-head p {
+        font-size: 0.8rem;
+    }
+
+    #about-head img {
+        width: 100%;
+    }
+
+    #about-head h1 {
+        font-size: 1rem;
+    }
+
+    #about-app {
+
+        padding: 5px;
+
+    }
+
+    #about-app .video {
+        width: 100%;
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 10px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 5px;
+        }
+
+        .form-group button {
+            padding: 5px 10px;
+        }
+    }
+
+    /* contact */
+    #page-header {
+        background-position: 90% 50%;
+    }
+
+    #contact-details {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #contact-details .details {
+        width: 100%;
+    }
+
+    #contact-details .map {
+        width: 100%;
+    }
+
+    #formpage {
+        padding: 10px;
+    }
+
+    /* cart */
+    #cart table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    #cart-add {
+        display: flex;
+       flex-direction: column;
+    }
+    #coupon{
+        width: 120%;
+    }
+
+    #subtotal {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+}
